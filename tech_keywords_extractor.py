@@ -5,8 +5,7 @@ tokenizer = AutoTokenizer.from_pretrained("ilsilfverskiold/tech-keywords-extract
 model = AutoModelForSeq2SeqLM.from_pretrained("ilsilfverskiold/tech-keywords-extractor")
 
 ARTICLE_TO_SUMMARIZE = (
-    "A binary search tree (BST) is a data structure in which each node has at most two children referred to as the left child and the right child. For each node, the left subtree contains only nodes with keys less than the node’s key, and the right subtree contains only nodes with keys greater than the node’s key. This property allows for efficient searching, insertion, and deletion operations."
-    "A binary search tree (BST) is a data structure in which each node has at most two children referred to as the left child and the right child. For each node, the left subtree contains only nodes with keys less than the node’s key, and the right subtree contains only nodes with keys greater than the node’s key. This property allows for efficient searching, insertion, and deletion operations."
+    "A binary search tree (BST) is a type of data structure where each node has up to two children, named the left and right children. In a BST, the left child’s value is less than its parent node’s value, and the right child’s value is greater than its parent node’s value. This arrangement enables quick search, insert, and delete operations."
 )
 inputs = tokenizer([ARTICLE_TO_SUMMARIZE], return_tensors="pt")
 
